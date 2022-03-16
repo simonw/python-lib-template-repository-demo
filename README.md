@@ -1,27 +1,37 @@
-# Template repository for creating new Python libraries
+# python-lib-template-repository-demo
 
-This GitHub [template repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/creating-a-repository-from-a-template) can be used to create a new repository with the skeleton of a Python library, based on the [python-lib](https://github.com/simonw/python-lib) cookiecutter.
+[![PyPI](https://img.shields.io/pypi/v/python-lib-template-repository-demo.svg)](https://pypi.org/project/python-lib-template-repository-demo/)
+[![Changelog](https://img.shields.io/github/v/release/simonw/python-lib-template-repository-demo?include_prereleases&label=changelog)](https://github.com/simonw/python-lib-template-repository-demo/releases)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/simonw/python-lib-template-repository-demo/blob/main/LICENSE)
 
-Start here: https://github.com/simonw/python-lib-template-repository/generate
+A demo of python-lib-template-repository
 
-The name of your repository will be the name of the Python package that you publish to [PyPI](https://pypi.org/), so make sure that name is not taken already!
+## Installation
 
-Add a one-line description of your repository, then click "Create repository from template".
+Install this library using `pip`:
 
-![Screenshot of the create repository interface](https://user-images.githubusercontent.com/9599/131230293-7ed5760e-b385-407e-bbf1-c6fc7540d3fe.png)
+    $ pip install python-lib-template-repository-demo
 
-Once created, your new repository will execute a GitHub Actions workflow that uses cookiecutter to rewrite the repository to the desired state. This make take 30 seconds or so.
+## Usage
 
-You can see an example of a repository generated using this template here:
+Usage instructions go here.
 
-- https://github.com/simonw/python-lib-template-repository-demo
+## Development
 
-## GitHub Actions setup by this repository
+To contribute to this library, first checkout the code. Then create a new virtual environment:
 
-The `test.yml` GitHub Actions workflow will run your tests automatically any time you push a change to the repo.
+    cd python-lib-template-repository-demo
+    python -mvenv venv
+    source venv/bin/activate
 
-The `publish.yml` Action runs when you create a new GitHub release. It can build and upload your package to [PyPI](https://pypi.org/).
+Or if you are using `pipenv`:
 
-For this to work, you need to create an API token for your PyPI account and add that to your repository as a secret called `PYPI_TOKEN`.
+    pipenv shell
 
-See [Publishing your library as a package to PyPI](https://github.com/simonw/python-lib#publishing-your-library-as-a-package-to-pypi) for details.
+Now install the dependencies and test dependencies:
+
+    pip install -e '.[test]'
+
+To run the tests:
+
+    pytest
